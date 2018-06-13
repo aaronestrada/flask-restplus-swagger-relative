@@ -15,7 +15,7 @@ Include the extension library and initialize the Flask application. Check for th
 ```python
 from flask import Flask
 from flask_restplus import Resource, Api
-from flask_restplus_swagger_relative import FlaskRestplusSwaggerRelative
+from flask_restplus_relative_swagger import FlaskRestplusRelativeSwagger
 
 app = Flask(__name__)
 api = Api(app)
@@ -28,7 +28,7 @@ class HelloWorld(Resource):
 
 
 # Change Swagger relative path on server
-api_doc = FlaskRestplusSwaggerRelative()
+api_doc = FlaskRestplusRelativeSwagger()
 api_doc.init_app(app=app, url='/this_is_a_new/path_for_swagger/')
 
 if __name__ == '__main__':

@@ -30,7 +30,7 @@ def create_custom_apidoc(url=None):
     return custom_apidoc
 
 
-class FlaskRestplusSwaggerRelative:
+class FlaskRestplusRelativeSwagger:
     """
     Relative path for Flask-restplus documentation with SwaggerUI.
     """

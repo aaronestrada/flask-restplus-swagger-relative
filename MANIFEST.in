@@ -1,0 +1,6 @@
+recursive-include flask_restplus_relative_swagger *.py
+recursive-include tests *.py
+include setup.py
+include requirements.txt
+include LICENSE.txt
+include README.md
