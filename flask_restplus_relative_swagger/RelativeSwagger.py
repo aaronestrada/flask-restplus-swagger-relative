@@ -12,7 +12,7 @@ def create_custom_apidoc(url=None):
     if url is None:
         url = '/'
 
-    relative_name = 'restplus_relative_doc{0}'.format(url)
+    relative_name = 'restplus_relative_doc{url}'.format(url=url)
     custom_apidoc = apidoc.Apidoc(relative_name, __name__,
                                   template_folder='templates',
                                   static_folder=os.path.dirname(apidoc.__file__) + '/static',
@@ -32,7 +32,7 @@ def create_custom_apidoc(url=None):
 
 class FlaskRestplusRelativeSwagger:
     """
-    Relative path for Flask-restplus documentation with SwaggerUI.
+    Relative path for Flask-Restplus documentation with SwaggerUI.
     """
 
     def __init__(self, app=None, url=None):

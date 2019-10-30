@@ -1,5 +1,13 @@
-Copyright (c) 2018, Aaron Estrada Poggio
+Flask Utilities - Flask-Restplus Swagger relative position
+Copyright (c) 2019, Eurac Research
 All rights reserved.
+
+Contributors
+------------
+- Aaron Estrada Poggio [aaron.estrada.poggio@gmail.com, aaron.estrada@eurac.edu]
+
+Disclaimer
+----------
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
