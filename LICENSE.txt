@@ -1,5 +1,5 @@
 Flask Utilities - Flask-Restplus Swagger relative position
-Copyright (c) 2019, Eurac Research
+Copyright (c) 2021, Eurac Research
 All rights reserved.
 
 Contributors

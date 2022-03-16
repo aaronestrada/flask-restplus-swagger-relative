@@ -24,5 +24,5 @@ def test_asset_found(client):
     :param client: Test client object
     :return:
     """
-    response = client.get('/this_is_a_new/path_for_swagger/swaggerui/swagger-ui-bundle.js')
+    response = client.get('/this_is_a_new/path_for_swagger_internal_documentation/swaggerui/swagger-ui-bundle.js')
     assert response.status_code is 200

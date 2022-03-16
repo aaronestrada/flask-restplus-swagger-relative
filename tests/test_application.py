@@ -1,5 +1,5 @@
 from flask import Flask, url_for
-from flask_restplus import Resource, Api
+from flask_restx import Resource, Api
 from flask_restplus_relative_swagger import FlaskRestplusRelativeSwagger, FlaskRestplusRelativeSwaggerApi
 
 app = Flask(__name__)
@@ -9,21 +9,22 @@ app = Flask(__name__)
 # -----------------------------------------------------------
 api = FlaskRestplusRelativeSwaggerApi(app=app)
 
-
 # ---------------------------------------------------------------
 # Only one option is needed. Comment the options you do not need.
 # ---------------------------------------------------------------
 # Option 1: overriding specs_url property for Api object
+"""
 @api.set_specs_url
 def overwrite_api_specs_url(self: Api):
     return url_for(self.endpoint('specs'), _external=True, _scheme='https')
-
+"""
 
 # Option 2: set Swagger specs in documentation generation with no scheme
 api.set_external_swagger_specs(external=False)
 
+
 # Option 3: set an external URL for swagger to use as documentation
-api.set_swagger_external_url(url='http://myotherdomain.com/swagger.json')
+# api.set_swagger_external_url(url='http://myotherdomain.com/swagger.json')
 
 
 @api.route('/hello')

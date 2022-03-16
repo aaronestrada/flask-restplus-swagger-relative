@@ -1,5 +1,5 @@
 from flask import url_for
-from flask_restplus import Api
+from flask_restx import Api
 
 
 class FlaskRestplusRelativeSwaggerApi(Api):
@@ -18,6 +18,7 @@ class FlaskRestplusRelativeSwaggerApi(Api):
     def set_external_swagger_specs(self, external: bool):
         """
         Set external swagger specification as external or internal (no scheme)
+
         :param external: Whether swagger.json specification on documentation generation is accessible as external or not
         :return:
         """
@@ -26,6 +27,7 @@ class FlaskRestplusRelativeSwaggerApi(Api):
     def set_swagger_external_url(self, url):
         """
         Set swagger.json file URL
+
         :param url: URL to set for Swagger documentation
         :return:
         """
@@ -34,6 +36,7 @@ class FlaskRestplusRelativeSwaggerApi(Api):
     def set_specs_url(self, f):
         """
         Decorator class to override specs_url property
+
         :param f: Function/method to set as overriding method
         :return:
         """
@@ -43,6 +46,7 @@ class FlaskRestplusRelativeSwaggerApi(Api):
     def specs_url(self):
         """
         Specs_url property for Swagger documentation
+
         :return:
         """
         # Check if there is no method substituting specs_url property

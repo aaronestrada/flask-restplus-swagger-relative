@@ -1,6 +1,6 @@
 import os
 from flask import url_for
-from flask_restplus import apidoc
+from flask_restx import apidoc
 
 
 def create_custom_apidoc(url=None):
@@ -12,10 +12,10 @@ def create_custom_apidoc(url=None):
     if url is None:
         url = '/'
 
-    relative_name = 'restplus_relative_doc{url}'.format(url=url)
+    relative_name = f'restplus_relative_doc{url}'
     custom_apidoc = apidoc.Apidoc(relative_name, __name__,
                                   template_folder='templates',
-                                  static_folder=os.path.dirname(apidoc.__file__) + '/static',
+                                  static_folder=f'{os.path.dirname(apidoc.__file__)}/static',
                                   static_url_path='/swaggerui')
 
     @custom_apidoc.add_app_template_global
@@ -25,7 +25,7 @@ def create_custom_apidoc(url=None):
         :param filename: Filename from Swagger
         :return:
         """
-        return url_for('{0}.static'.format(relative_name), filename=filename)
+        return url_for(f'{relative_name}.static', filename=filename)
 
     return custom_apidoc
 
